@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .forms import StudentForm
 from .models import Student
-from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 # Create your views here.
 
@@ -92,6 +92,7 @@ class StudentUpdateView(UpdateView):
     form_class = StudentForm
     template_name = 'fscohort/student_update.html'
     success_url = reverse_lazy('list')
+    
 
 
 
@@ -109,3 +110,8 @@ def student_delete(request, id):
         "student":student
     }
     return render(request, "fscohort/student_delete.html",context)
+
+class StudentDeleteView(DeleteView):
+    model = Student
+    template_name ='fscohort/student_delete.html'
+    success_url = reverse_lazy('list')
