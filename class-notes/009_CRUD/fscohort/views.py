@@ -61,3 +61,8 @@ def student_detail(request, id):
         'student': student
     }
     return render(request, 'fscohort/student_detail.html', context)
+
+
+form.save()
+    messages.success(request, "student created succesfully!")
+    return redirect("list")
