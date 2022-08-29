@@ -2,15 +2,15 @@
     background-color: cadetblue;
 }
 
-.container {
+.container{
+    margin-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    gap: 2.5rem;
-  }
+    justify-content: space-evenly;
+}
 
-  #warning {
+#warning {
     background-color: lightcoral;
     color: aliceblue;
     margin: auto;
@@ -26,4 +26,11 @@
     height: 30%;
     text-align: center;
 }
+
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2017/01/24/03/53/plant-2004483__480.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 textarea { max-width: 100% }
