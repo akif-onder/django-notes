@@ -12,5 +12,5 @@ class UserForm(UserCreationForm):
 class UserProfileForm(forms.ModelForm):
     class Meta():
         model=UserProfile
-        fields='__all__'
+        # fields='__all__'
         exclude=('user',)     
